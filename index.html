@@ -476,8 +476,12 @@ function sendMessage() {
 
   <button onclick="shuffleGrounding()">Shuffle Grounding</button>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script
+<script>
+let habits = [];
+let dailyProgress = {};
+let selectedDate = "";
 function addHabit() {
   const input = document.getElementById("habitInput");
   const habit = input.value.trim();
@@ -490,6 +494,7 @@ function addHabit() {
   renderHabits();
   updateChart();
 }
+</script>
 
 function renderHabits() {
   const list = document.getElementById("habitList");
